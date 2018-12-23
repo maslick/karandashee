@@ -1,10 +1,12 @@
+import Karandashee from './karandashee.js';
+
 ////////////////////////
 // I Simulator
 ////////////////////////
 let items = ["rain", "sunshine", "icy cold", "snow", "thunderstorm", "cloudy", "blizard", "hot", "tsunami"];
 
 const dataObservable = Rx.Observable
-    .interval(500)
+    .interval(100)
     .map(x => {
         return {
             item: items[x % items.length],
@@ -13,9 +15,9 @@ const dataObservable = Rx.Observable
     }).share();
 
 ////////////////////////
-// II Palochki
+// II Karandashi
 ////////////////////////
-let palochkiOptions = {
+let karandasheeOptions = {
     graphdiv: "#karandasheeGraph",
     observable: dataObservable,
     key: "item",
@@ -28,8 +30,7 @@ let palochkiOptions = {
     }
 };
 
-let simulatorLocation = new Karandashee(palochkiOptions);
-
+let karandashee = new Karandashee(karandasheeOptions);
 
 ////////////////////////
 // HELPER FUNCTIONS

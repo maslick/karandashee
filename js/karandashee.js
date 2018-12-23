@@ -1,5 +1,6 @@
-class Karandashee {
+import MyFixedQueue from "./queue.js";
 
+export default class Karandashee {
     constructor(options) {
         this.updateRate = options.updateRate || 2000;
         this.numberOfBars = options.numberOfBars || 96;
@@ -65,7 +66,7 @@ class Karandashee {
     }
 
     initArray() {
-        this.numbers = FixedQueue(this.numberOfBars);
+        this.numbers = new MyFixedQueue(this.numberOfBars);
     }
 
     initGraph() {
