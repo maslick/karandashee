@@ -1,4 +1,4 @@
-export default class MyFixedQueue {
+class MyFixedQueue {
     // Create a constructor for the fixed-length queue. This is
     // really more of a FACTORY than a construtor since an
     // entirely tangential object is returned.

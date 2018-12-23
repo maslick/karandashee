@@ -1,6 +1,4 @@
-import MyFixedQueue from "./queue.js";
-
-export default class Karandashee {
+class Karandashee {
     constructor(options) {
         this.updateRate = options.updateRate || 2000;
         this.numberOfBars = options.numberOfBars || 96;

@@ -1,5 +1,3 @@
-import Karandashee from '../src/karandashee.js';
-
 ////////////////////////
 // I Simulator
 ////////////////////////
