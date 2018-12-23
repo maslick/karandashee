@@ -1,15 +1,15 @@
 ////////////////////////
 // I Simulator
 ////////////////////////
-let items = ["Jordan", "Phelps", "Durant", "Lochte", "Pippen", "Kukoč", "Lebron", "Vincanity", "Waitzkin"];
+let items = ["rain", "sunshine", "icy cold", "snow", "thunderstorm", "cloudy", "blizard", "hot", "tsunami"];
 
 const dataObservable = Rx.Observable
-    .interval(100)
+    .interval(500)
     .map(x => {
         return {
-            item: chance.pickset(items, 1)[0],
+            item: items[x % items.length],
             timestamp: new Date().getTime(),
-        }
+        };
     }).share();
 
 ////////////////////////
@@ -20,7 +20,6 @@ let palochkiOptions = {
     observable: dataObservable,
     key: "item",
     values: items,
-    humanValues: items.map(x => "Mr. " + x),
     onMouseOverCb: x => {
         $("#dataValue").html(formatHover(x.item, x.timestamp));
     },
