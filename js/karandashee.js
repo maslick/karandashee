@@ -1,4 +1,4 @@
-class Palochki {
+class Karandashee {
 
     constructor(options) {
         this.updateRate = options.updateRate || 2000;

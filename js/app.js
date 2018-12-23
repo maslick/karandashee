@@ -16,7 +16,7 @@ const dataObservable = Rx.Observable
 // II Palochki
 ////////////////////////
 let palochkiOptions = {
-    graphdiv: "#palochkiGraph",
+    graphdiv: "#karandasheeGraph",
     observable: dataObservable,
     key: "item",
     values: items,
@@ -28,7 +28,7 @@ let palochkiOptions = {
     }
 };
 
-let simulatorLocation = new Palochki(palochkiOptions);
+let simulatorLocation = new Karandashee(palochkiOptions);
 
 
 ////////////////////////

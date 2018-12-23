@@ -1,5 +1,6 @@
-/* Palochki */
-.palochki .bar {
+/* Karandashee */
+
+.karandashee .bar {
     width: 9px;
     margin-right: 1px;
     background-color: #F4F5F7;
@@ -8,19 +9,19 @@
     white-space: normal;
 }
 
-.palochki .legend {
+.karandashee .legend {
     width: 960px;
     padding: 15px 0;
     text-align: center;
 }
 
-.palochki .legend .legend-item {
+.karandashee .legend .legend-item {
     display: inline-block;
     white-space: normal;
     min-width: 73px;
 }
 
-.palochki .legend .legend-item-color {
+.karandashee .legend .legend-item-color {
     width: 5px;
     height: 5px;
     padding: 10px;
@@ -29,22 +30,22 @@
     text-align: center;
 }
 
-.palochki .legend .legend-item-caption {
+.karandashee .legend .legend-item-caption {
     font-size: 0.8em;
     text-align: center;
 }
 
-.palochki #timescale {
+.karandashee #timescale {
     display: none;
 }
 
-.palochki .axis path,
-.palochki .axis line {
+.karandashee .axis path,
+.karandashee .axis line {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;
 }
 
-.palochki .axis text{
+.karandashee .axis text{
     font: 10px sans-serif;
 }
