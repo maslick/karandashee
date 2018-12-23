@@ -1,4 +1,4 @@
-import Karandashee from './karandashee.js';
+import Karandashee from '../src/karandashee.js';
 
 ////////////////////////
 // I Simulator
