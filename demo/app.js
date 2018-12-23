@@ -4,7 +4,7 @@
 let items = ["rain", "sunshine", "icy cold", "snow", "thunderstorm", "cloudy", "blizard", "hot", "tsunami"];
 
 const dataObservable = Rx.Observable
-    .interval(100)
+    .interval(500)
     .map(x => {
         return {
             item: items[x % items.length],

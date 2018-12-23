@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "babel src -d lib"
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {
