@@ -1,0 +1,73 @@
+/* Main */
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    min-width: 1010px;
+    width: 1010px;
+    margin: 0 auto;
+    padding-top: 20px;
+    min-height: 100%;
+}
+
+.content {
+    /*flex: 1;*/
+}
+
+#header {
+    margin: 0 auto 0;
+    padding: 20px 25px;
+    font-family: "courier", monospace;
+    color: #dadada;
+}
+
+#header #title {
+    float: left;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: default;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select:  none; /* Konqueror HTML */
+      -moz-user-select:    none; /* Firefox */
+      -ms-user-select:     none; /* Internet Explorer/Edge */
+      user-select:         none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+/* main content */
+.value-mouseover {
+    text-align: center;
+    padding: 0 0 15px 0;
+}
+
+section {
+    display: table;
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+section .item1{
+    padding: 25px;
+}
+
+section {
+    background: rgba(240, 240, 240, 0.61);
+}

@@ -1,0 +1,17 @@
+{
+  "name": "palochki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^3.5.17",
+    "rx-lite": "^4.0.8",
+    "chance": "^1.0.18",
+    "jquery": "^3.2.1"
+  }
+}

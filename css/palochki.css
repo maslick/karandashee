@@ -1,0 +1,50 @@
+/* Palochki */
+.palochki .bar {
+    width: 9px;
+    margin-right: 1px;
+    background-color: #F4F5F7;
+    border-radius: 55px 55px 55px 55px;
+    display: inline-block;
+    white-space: normal;
+}
+
+.palochki .legend {
+    width: 960px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.palochki .legend .legend-item {
+    display: inline-block;
+    white-space: normal;
+    min-width: 73px;
+}
+
+.palochki .legend .legend-item-color {
+    width: 5px;
+    height: 5px;
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.palochki .legend .legend-item-caption {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.palochki #timescale {
+    display: none;
+}
+
+.palochki .axis path,
+.palochki .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.palochki .axis text{
+    font: 10px sans-serif;
+}
