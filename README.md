@@ -11,9 +11,9 @@ time series plot for categorical data
 See [here](https://maslick.github.io/karandashee/demo/).
 
 ## Features
-* a running plot with bars representing a categorical event
+* a running plot with bars representing categorical events
 * input: Rx streams (e.g. live MQTT data)
-* multiple plots on a page
+* multiple plots on one page
 * uses ``d3`` and ``rx-lite``
 
 ## Usage
