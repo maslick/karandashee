@@ -1,4 +1,8 @@
 # karanda-shee
+[![npm (scoped)](https://img.shields.io/npm/v/@maslick/karandashee.svg)](https://www.npmjs.com/package/@maslick/karandashee)
+[![npm download count](https://img.shields.io/npm/dt/@maslick/karandashee.svg)](https://www.npmjs.com/package/@maslick/karandashee)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 time series plot for categorical data
 
 ![screenshot](karandashee.png)

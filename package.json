@@ -1,13 +1,28 @@
 {
   "name": "@maslick/karandashee",
   "version": "1.0.0",
-  "description": "",
+  "description": "nice-looking time series plot for categorical data",
   "main": "index.js",
-  "author": "",
-  "license": "ISC",
+  "author": "Pavel Maslov",
+  "license": "MIT",
   "dependencies": {
     "d3": "^3.5.17",
     "rx-lite": "^4.0.8",
     "jquery": "^3.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maslick/karandashee.git"
+  },
+  "keywords": [
+    "time-series",
+    "plot",
+    "graph",
+    "categorical",
+    "discrete"
+  ],
+  "bugs": {
+    "url": "https://github.com/maslick/karandashee/issues"
+  },
+  "homepage": "https://github.com/maslick/karandashee#readme"
 }
