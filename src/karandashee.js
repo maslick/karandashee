@@ -64,7 +64,7 @@ class Karandashee {
     }
 
     initArray() {
-        this.numbers = new MyFixedQueue(this.numberOfBars);
+        this.numbers = new FixedQueue(this.numberOfBars);
     }
 
     initGraph() {
@@ -168,5 +168,19 @@ class Karandashee {
         sel.remove();
         if (this.subscription) this.subscription.dispose();
         this.subscription = null;
+    }
+}
+
+
+class FixedQueue extends Array {
+    constructor(size) {
+        super();
+        this.size = size || 10;
+    }
+
+    push(...items) {
+        if (items.length > 1) return;
+        if (this.length > this.size - 1) this.shift();
+        super.push(items[0]);
     }
 }
