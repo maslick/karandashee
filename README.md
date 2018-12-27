@@ -12,7 +12,7 @@ See [here](https://maslick.github.io/karandashee/demo/).
 
 ## Features
 * a running plot with bars representing categorical events
-* input: Rx streams (e.g. live MQTT data)
+* input: Rx streams (e.g. live Web socket/MQTT data)
 * multiple plots on one page
 * uses ``d3`` and ``rx-lite``
 
@@ -27,7 +27,6 @@ Include this into your html:
 <script src="vendor/d3.min.js"></script>
 <script src="vendor/rx.lite.min.js"></script>
 <script src="src/karandashee.js"></script>
-<script src="src/queue.js"></script>
 ```
 
 Define your data stream (rx-lite):

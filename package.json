@@ -1,6 +1,6 @@
 {
   "name": "@maslick/karandashee",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "nice-looking time series plot for categorical data",
   "main": "index.js",
   "author": "Pavel Maslov",
@@ -19,7 +19,9 @@
     "plot",
     "graph",
     "categorical",
-    "discrete"
+    "discrete",
+    "mqtt",
+    "websocket"
   ],
   "bugs": {
     "url": "https://github.com/maslick/karandashee/issues"
