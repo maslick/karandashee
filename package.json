@@ -1,13 +1,15 @@
 {
   "name": "@maslick/karandashee",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "nice-looking time series plot for categorical data",
   "main": "index.js",
   "author": "Pavel Maslov",
   "license": "MIT",
   "dependencies": {
     "d3": "^3.5.17",
-    "rx-lite": "^4.0.8",
+    "rx-lite": "^4.0.8"
+  },
+  "devDependencies": {
     "jquery": "^3.2.1"
   },
   "repository": {
