@@ -14,6 +14,7 @@ class Karandashee {
         this.humanValues = options.humanValues || options.values;
         this.onMouseOverCb = options.onMouseOverCb;
         this.onMouseOutCb = options.onMouseOutCb;
+        this.currentTimestamp = null;
 
         this.initialize();
     }
@@ -39,9 +40,9 @@ class Karandashee {
             .subscribe(function (x) {
                 if (self.currentTimestamp) {
                     let delay = x.timestamp - self.currentTimestamp;
-                    var numberOfMissing = Math.floor(delay / self.updateRate) - 1;
+                    const numberOfMissing = Math.floor(delay / self.updateRate) - 1;
 
-                    for (var i = 0; i < numberOfMissing; i++) {
+                    for (let i = 0; i < numberOfMissing; i++) {
                         let ts = self.currentTimestamp + self.updateRate * (i + 1);
                         // console.log(x.timestamp - ts);
 
@@ -88,7 +89,7 @@ class Karandashee {
     createLegend() {
         let self = this;
         d3.select(this.graphdiv).append("div").attr("class", "legend");
-        var divs = d3.select(this.graphdiv + " .legend")
+        const divs = d3.select(this.graphdiv + " .legend")
             .selectAll(".legend-item")
             .data(self.humanValues ? self.humanValues : self.values)
             .enter()
@@ -175,7 +176,7 @@ class Karandashee {
 class FixedQueue extends Array {
     constructor(size) {
         super();
-        this.size = size || 10;
+        this.size = size || 100;
     }
 
     push(...items) {
