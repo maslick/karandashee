@@ -1,6 +1,6 @@
 # karanda-shee
 [![npm (scoped)](https://img.shields.io/npm/v/@maslick/karandashee.svg)](https://www.npmjs.com/package/@maslick/karandashee)
-[![npm download count](https://img.shields.io/npm/dt/@maslick/karandashee.svg)](https://www.npmjs.com/package/@maslick/karandashee)
+[![npm download count](https://img.shields.io/npm/dt/@maslick/karandashee.svg)](https://npmcharts.com/compare/@maslick/karandashee?minimal=true)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 time series plot for categorical data
@@ -12,7 +12,7 @@ See [here](https://maslick.github.io/karandashee/demo/).
 
 ## Features
 * a running plot with bars representing categorical events
-* input: Rx streams (e.g. live Web socket/MQTT data)
+* input: Rx streams (e.g. live websocket or MQTT data)
 * multiple plots on one page
 * uses ``d3`` and ``rx-lite``
 

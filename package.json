@@ -1,17 +1,20 @@
 {
   "name": "@maslick/karandashee",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "nice-looking time series plot for categorical data",
   "main": "index.js",
   "author": "Pavel Maslov",
   "license": "MIT",
   "dependencies": {
-    "d3": "^3.5.17",
+    "d3": "~3.5.17",
     "rx-lite": "^4.0.8"
   },
   "devDependencies": {
     "jquery": "^3.2.1"
   },
+  "files": [
+    "src/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maslick/karandashee.git"
