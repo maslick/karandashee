@@ -1,6 +1,6 @@
 {
   "name": "@maslick/karandashee",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "nice-looking time series plot for categorical data",
   "main": "src/karandashee.js",
   "author": "Pavel Maslov",
@@ -21,7 +21,10 @@
   },
   "keywords": [
     "time-series",
+    "time series",
+    "chart",
     "plot",
+    "realtime",
     "graph",
     "categorical",
     "discrete",
@@ -29,7 +32,8 @@
     "websocket",
     "Rx",
     "ReactiveX",
-    "Streams"
+    "Streams",
+    "browser"
   ],
   "bugs": {
     "url": "https://github.com/maslick/karandashee/issues"
