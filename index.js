@@ -1,1 +1,0 @@
-import Karandashee from './src/karandashee';
