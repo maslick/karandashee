@@ -16,7 +16,9 @@
     "parcel": "^1.11.0"
   },
   "files": [
-    "src/"
+    "src/",
+    "dist/",
+    "example/"
   ],
   "repository": {
     "type": "git",
@@ -45,7 +47,7 @@
   "homepage": "https://github.com/maslick/karandashee#readme",
   "scripts": {
     "browser": "npx webpack --config webpack.config.js",
-    "build-node-test": "parcel node/index.html -d test",
-    "build-node-prod": "parcel build node/index.html --public-url ./ --out-dir test/"
+    "build-node-test": "parcel example/index.html -d test",
+    "build-node-prod": "parcel build example/index.html --public-url ./ --out-dir test/"
   }
 }
