@@ -10,7 +10,9 @@
     "rx-lite": "^4.0.8"
   },
   "devDependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.2.1"
   },
   "files": [
     "src/"
@@ -40,5 +42,7 @@
     "url": "https://github.com/maslick/karandashee/issues"
   },
   "homepage": "https://github.com/maslick/karandashee#readme",
-  "scripts": {}
+  "scripts": {
+    "browser": "npx webpack --config webpack.config.js"
+  }
 }

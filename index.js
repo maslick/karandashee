@@ -1,1 +1,1 @@
-const karandashee = require("./src/karandashee");
+import Karandashee from './src/karandashee';
