@@ -57,7 +57,7 @@ let karandashee = new Karandashee(karandasheeOptions);
 ```
 
 ## Node.js
-*Karandashee* can be used either in the [Browser](https://github.com/maslick/karandashee/tree/master/demo) or in the [Node.js](https://github.com/maslick/karandashee/tree/master/node) environment.
+*Karandashee* can be used either in the [Browser](https://github.com/maslick/karandashee/tree/master/demo) or in the [Node.js](https://github.com/maslick/karandashee/tree/master/example) environment.
 
 
 ## License
