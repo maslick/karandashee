@@ -21,6 +21,7 @@ See [here](https://maslick.github.io/karandashee/demo/).
 Include this into your html:
 
 ```html
+<link rel="stylesheet" href="src/karandashee.css">
 <div id="karandasheeGraph"></div>
 ```
 
