@@ -1,6 +1,6 @@
 {
   "name": "@maslick/karandashee",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "nice-looking time series plot for categorical data",
   "main": "src/karandashee.js",
   "author": "Pavel Maslov",

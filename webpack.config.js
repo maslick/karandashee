@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './index.js',
+    entry: './src/karandashee.js',
     output: {
         filename: 'karandashee.min.js',
         path: path.resolve(__dirname, 'dist')

@@ -64,7 +64,8 @@ section {
     margin-bottom: 3px;
 }
 
-section .item1{
+section .item1 {
+    min-height: 218px;
     padding: 25px;
 }
 

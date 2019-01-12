@@ -34,20 +34,17 @@ import * as d3 from "d3";
             this.createLegend();
 
             this.subscription = this.observable
-                .map(function (x) {
-                    let copy = Object.create(x);
-                    copy.val = self.barHeight * self.values.indexOf(copy[self.key]) / self.values.length + self.minBarHeight;
-                    copy.color = self.color(self.values.indexOf(copy[self.key]));
-                    return copy;
-                })
-                .subscribe(function (x) {
+                .map(x => Object.assign({}, x, {
+                    val: self.barHeight * self.values.indexOf(x[self.key]) / self.values.length + self.minBarHeight,
+                    color: self.color(self.values.indexOf(x[self.key]))
+                }))
+                .subscribe(x => {
                     if (self.currentTimestamp) {
                         let delay = x.timestamp - self.currentTimestamp;
                         const numberOfMissing = Math.floor(delay / self.updateRate) - 1;
 
                         for (let i = 0; i < numberOfMissing; i++) {
                             let ts = self.currentTimestamp + self.updateRate * (i + 1);
-                            // console.log(x.timestamp - ts);
 
                             let dummy = {
                                 val: 0,
