@@ -6,8 +6,7 @@
   "author": "Pavel Maslov",
   "license": "MIT",
   "dependencies": {
-    "d3": "^5.7.0",
-    "rx-lite": "^4.0.8"
+    "d3": "^5.7.0"
   },
   "devDependencies": {
     "jquery": "^3.3.1",

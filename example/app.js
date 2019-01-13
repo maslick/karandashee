@@ -1,5 +1,5 @@
 import Karandashee from "../src/karandashee";
-import Rx from "rx-lite";
+import { Observable } from "../src/Rx";
 import $ from "jquery";
 
 
@@ -8,14 +8,12 @@ import $ from "jquery";
 ////////////////////////
 let items = ["rain", "sunshine", "icy cold", "snow", "thunderstorm", "cloudy", "blizard", "hot", "tsunami"];
 
-const dataObservable = Rx.Observable
+const dataObservable = Observable
     .interval(500)
-    .map(x => {
-        return {
-            item: items[x % items.length],
-            timestamp: new Date().getTime(),
-        };
-    }).share();
+    .map(x => ({
+        item: items[x % items.length],
+        timestamp: new Date().getTime(),
+    }));
 
 ////////////////////////
 // II Karandashi
