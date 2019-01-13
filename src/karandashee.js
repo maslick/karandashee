@@ -11,7 +11,7 @@ import * as d3 from "d3";
             this.observable = options.observable;
             this.barHeight = this.minBarHeight + 50;
             this.numbers = [];
-            this.color = d3.scaleOrdinal(d3.schemeCategory10).domain([0, 20]);
+            this.color = d3.scaleOrdinal(d3.schemePaired);
             this.key = options.key;
             this.values = options.values;
             this.humanValues = options.humanValues || options.values;
@@ -23,10 +23,9 @@ import * as d3 from "d3";
         }
 
         initialize() {
-            let self = this;
-            self.reset();
-            if (d3.select(self.graphdiv).empty()) {
-                console.warn("no element found: " + self.graphdiv);
+            this.reset();
+            if (d3.select(this.graphdiv).empty()) {
+                console.warn("no element found: " + this.graphdiv);
                 return;
             }
             this.initArray();
@@ -34,33 +33,34 @@ import * as d3 from "d3";
             this.createLegend();
 
             this.subscription = this.observable
-                .map(x => Object.assign({}, x, {
-                    val: self.barHeight * self.values.indexOf(x[self.key]) / self.values.length + self.minBarHeight,
-                    color: self.color(self.values.indexOf(x[self.key]))
+                .map(x => ({
+                    ...x,
+                    val: this.barHeight * this.values.indexOf(x[this.key]) / this.values.length + this.minBarHeight,
+                    color: this.color(this.values.indexOf(x[this.key]))
                 }))
                 .subscribe(x => {
-                    if (self.currentTimestamp) {
-                        let delay = x.timestamp - self.currentTimestamp;
-                        const numberOfMissing = Math.floor(delay / self.updateRate) - 1;
+                    if (this.currentTimestamp) {
+                        let delay = x.timestamp - this.currentTimestamp;
+                        const numberOfMissing = Math.floor(delay / this.updateRate) - 1;
 
                         for (let i = 0; i < numberOfMissing; i++) {
-                            let ts = self.currentTimestamp + self.updateRate * (i + 1);
+                            let ts = this.currentTimestamp + this.updateRate * (i + 1);
 
                             let dummy = {
                                 val: 0,
                                 color: "grey",
-                                timestamp: self.currentTimestamp + self.updateRate * (i + 1)
+                                timestamp: this.currentTimestamp + this.updateRate * (i + 1)
                             };
-                            self.numbers.push(dummy);
-                            self.updateGraph();
-                            self.updateAxes(dummy);
+                            this.numbers.push(dummy);
+                            this.updateGraph();
+                            this.updateAxes(dummy);
                         }
 
                     }
-                    self.numbers.push(x);
-                    self.updateGraph();
-                    self.updateAxes(x);
-                    self.currentTimestamp = x.timestamp;
+                    this.numbers.push(x);
+                    this.updateGraph();
+                    this.updateAxes(x);
+                    this.currentTimestamp = x.timestamp;
                 });
         }
 
@@ -87,46 +87,32 @@ import * as d3 from "d3";
         }
 
         createLegend() {
-            let self = this;
             d3.select(this.graphdiv).append("div").attr("class", "legend");
             const divs = d3.select(this.graphdiv + " .legend")
                 .selectAll(".legend-item")
-                .data(self.humanValues ? self.humanValues : self.values)
+                .data(this.humanValues ? this.humanValues : this.values)
                 .enter()
                 .append("div").attr("class", "legend-item");
 
             divs
                 .append("div").attr("class", "legend-item-color")
-                .style("background", function (d) {
-                    return self.color(self.humanValues ? self.humanValues.indexOf(d) : self.values.indexOf(d));
-                });
+                .style("background", d => this.color(this.humanValues ? this.humanValues.indexOf(d) : this.values.indexOf(d)));
 
             divs.append("div").attr("class", "legend-item-caption")
-                .text(function (d) {
-                    return d;
-                });
+                .text(d => d);
         }
 
         updateGraph() {
             let self = this;
-
             // Updates the visualization
             let selection = d3.select(this.graphdiv + " #chart")
-                .selectAll(".bar").data(this.numbers, function (d) {
-                    return d.timestamp;
-                });
+                .selectAll(".bar").data(this.numbers, d => d.timestamp);
 
             selection.enter()
                 .append("div").attr("class", "bar")
-                .style("height", function (d) {
-                    return d.val;
-                })
-                .style("margin-top", function (d) {
-                    return self.barHeight - d.val;
-                })
-                .style("background", function (d) {
-                    return d.color;
-                });
+                .style("height", d => d.val)
+                .style("margin-top", d => this.barHeight - d.val)
+                .style("background", d => d.color);
 
             selection
                 .on("mouseover", function (d, i) {
