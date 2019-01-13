@@ -14,7 +14,7 @@ See [here](https://maslick.github.io/karandashee/demo/).
 * a running plot with bars representing categorical events
 * input: Rx streams (e.g. live websocket or MQTT data)
 * multiple plots on one page
-* leverages ``d3`` and ``rx-lite``
+* leverages ``d3 v5`` and ``rx-lite``
 * browser and node.js friendly
 
 ## Usage
@@ -26,8 +26,8 @@ Include this into your html:
 ```
 
 ```html
-<script src="vendor/d3.min.js"></script>
-<script src="vendor/rx.lite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Reactive-Extensions/RxJS/dist/rx.lite.min.js"></script>
 <script src="dist/karandashee.min.js"></script>
 ```
 
