@@ -11,7 +11,7 @@ import * as d3 from "d3";
             this.observable = options.observable;
             this.barHeight = this.minBarHeight + 50;
             this.numbers = [];
-            this.color = d3.scale.category20().domain([0, 20]);
+            this.color = d3.scaleOrdinal(d3.schemeCategory10).domain([0, 20]);
             this.key = options.key;
             this.values = options.values;
             this.humanValues = options.humanValues || options.values;
@@ -156,11 +156,8 @@ import * as d3 from "d3";
                 timeB.setSeconds(timeA.getSeconds() + this.numberOfBars * this.updateRate / 1000);
             }
 
-            this.xScale = d3.time.scale().domain([timeA, timeB]).range([0, this.w]);
-            this.xAxis = d3.svg.axis()
-                .scale(this.xScale)
-                .orient("bottom")
-                .tickFormat(d3.time.format('%H:%M:%S'));
+            this.xScale = d3.scaleTime().domain([timeA, timeB]).range([0, this.w]);
+            this.xAxis = d3.axisBottom(this.xScale).tickFormat(d3.timeFormat('%H:%M:%S'));
             d3.select(this.graphdiv + " .x.axis").call(this.xAxis);
         }
 
