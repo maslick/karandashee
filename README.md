@@ -60,15 +60,6 @@ let karandashee = new Karandashee(karandasheeOptions);
 ## Node.js
 *Karandashee* can be used either in the [Browser](https://github.com/maslick/karandashee/tree/master/demo) or in the [Node.js](https://github.com/maslick/karandashee/tree/master/example) environment.
 
-
-## Openshift
-
-```zsh
-$ oc new-app https://github.com/maslick/karandashee.git --name karandashee
-$ oc set env dc/karandashee PORT=8080
-$ oc expose svc/karandashee
-```
-
 ## License
 
 This project is licenced under the [MIT License](http://opensource.org/licenses/mit-license.html).
