@@ -64,7 +64,7 @@ let karandashee = new Karandashee(karandasheeOptions);
 ## Openshift
 
 ```zsh
-$ oc new-app https://github.com/maslick/karandashee.git#openshift --name karandashee
+$ oc new-app https://github.com/maslick/karandashee.git --name karandashee
 $ oc set env dc/karandashee PORT=8080
 $ oc expose svc/karandashee
 ```
