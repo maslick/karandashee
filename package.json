@@ -7,7 +7,9 @@
   "license": "MIT",
   "dependencies": {
     "d3": "^5.7.0",
-    "rx-lite": "^4.0.8"
+    "rx-lite": "^4.0.8",
+    "serve-static": "^1.13.2",
+    "connect": "^3.6.6"
   },
   "devDependencies": {
     "jquery": "^3.3.1",
@@ -50,6 +52,8 @@
   "scripts": {
     "browser": "npx webpack --config webpack.config.js",
     "build-node-test": "parcel example/index.html -d test",
-    "build-node-prod": "parcel build example/index.html --public-url ./ --out-dir test/"
+    "build-node-prod": "parcel build example/index.html --public-url ./ --out-dir test/",
+    "build": "npm run build-node-prod",
+    "start": "node server.js"
   }
 }
